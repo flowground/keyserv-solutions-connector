@@ -1,0 +1,26 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "additionalProperties": false,
+            "properties": {
+                "custom": {},
+                "key": {
+                    "format": "guid",
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "serial": {
+                    "format": "guid",
+                    "type": "string"
+                }
+            },
+            "required": [
+                "key"
+            ],
+            "type": "object"
+        }
+    }
+}

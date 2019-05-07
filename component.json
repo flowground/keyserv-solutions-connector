@@ -1,0 +1,242 @@
+{
+    "title": "KeyServ Solutions",
+    "description": "KeyServ API",
+    "docsUrl": "",
+    "url": "https://api.apis.guru/v2/specs/keyserv.solutions/1.0.1/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://keyserv.solutions/",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "ProductsApi_DeleteProduct": {
+            "main": "./lib/actions/ProductsApi_DeleteProduct.js",
+            "title": "ProductsApi_DeleteProduct",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ProductsApi_DeleteProduct.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ProductsApi_PutProduct2": {
+            "main": "./lib/actions/ProductsApi_PutProduct2.js",
+            "title": "ProductsApi_PutProduct2",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ProductsApi_PutProduct2.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ProductsApi_PutProduct": {
+            "main": "./lib/actions/ProductsApi_PutProduct.js",
+            "title": "ProductsApi_PutProduct",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ProductsApi_PutProduct.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "SubscriptionsApi_DeleteSubscription": {
+            "main": "./lib/actions/SubscriptionsApi_DeleteSubscription.js",
+            "title": "SubscriptionsApi_DeleteSubscription",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/SubscriptionsApi_DeleteSubscription.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "SubscriptionsApi_PutSubscription2": {
+            "main": "./lib/actions/SubscriptionsApi_PutSubscription2.js",
+            "title": "SubscriptionsApi_PutSubscription2",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/SubscriptionsApi_PutSubscription2.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "SubscriptionsApi_PutSubscription": {
+            "main": "./lib/actions/SubscriptionsApi_PutSubscription.js",
+            "title": "SubscriptionsApi_PutSubscription",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/SubscriptionsApi_PutSubscription.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "KeysApi_Current": {
+            "main": "./lib/actions/KeysApi_Current.js",
+            "title": "KeysApi_Current",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/KeysApi_Current.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "KeysApi_Expiry": {
+            "main": "./lib/actions/KeysApi_Expiry.js",
+            "title": "KeysApi_Expiry",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/KeysApi_Expiry.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "KeysApi_Find": {
+            "main": "./lib/actions/KeysApi_Find.js",
+            "title": "KeysApi_Find",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/KeysApi_Find.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ProductsApi_Find": {
+            "main": "./lib/actions/ProductsApi_Find.js",
+            "title": "ProductsApi_Find",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ProductsApi_Find.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "ProductsApi_Save": {
+            "main": "./lib/actions/ProductsApi_Save.js",
+            "title": "ProductsApi_Save",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/ProductsApi_Save.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "SubscriptionsApi_Find": {
+            "main": "./lib/actions/SubscriptionsApi_Find.js",
+            "title": "SubscriptionsApi_Find",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/SubscriptionsApi_Find.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "SubscriptionsApi_Save": {
+            "main": "./lib/actions/SubscriptionsApi_Save.js",
+            "title": "SubscriptionsApi_Save",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/SubscriptionsApi_Save.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

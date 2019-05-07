@@ -1,0 +1,48 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "additionalProperties": false,
+            "properties": {
+                "action": {
+                    "minLength": 1,
+                    "type": "string"
+                },
+                "callbackOnModify": {
+                    "type": "boolean"
+                },
+                "callbackUrl": {
+                    "format": "uri",
+                    "title": "Callback Url",
+                    "type": "string"
+                },
+                "custom": {},
+                "frequency": {
+                    "minLength": 1,
+                    "type": "string"
+                },
+                "key": {
+                    "format": "guid",
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "serial": {
+                    "format": "guid",
+                    "type": "string"
+                },
+                "startFrom": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "frequency",
+                "action",
+                "key",
+                "serial"
+            ],
+            "type": "object"
+        }
+    }
+}

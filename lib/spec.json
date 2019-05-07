@@ -1,0 +1,1400 @@
+{
+    "openapi": "3.0.0",
+    "servers": [
+        {
+            "url": "https://keyserv.solutions/"
+        }
+    ],
+    "info": {
+        "contact": {
+            "x-twitter": "theTechComp"
+        },
+        "description": "KeyServ API",
+        "title": "KeyServ Solutions",
+        "version": "1.0.1",
+        "x-apisguru-categories": [
+            "iot"
+        ],
+        "x-logo": {
+            "url": "https://api.apis.guru/v2/cache/logo/https_twitter.com_theTechComp_profile_image.jpeg"
+        },
+        "x-origin": [
+            {
+                "format": "swagger",
+                "url": "https://keyserv.solutions/v1/s2.json",
+                "version": "2.0"
+            }
+        ],
+        "x-preferred": true,
+        "x-providerName": "keyserv.solutions"
+    },
+    "paths": {
+        "/ProductsApi/DeleteProduct": {
+            "delete": {
+                "operationId": "ProductsApi_DeleteProduct",
+                "responses": {
+                    "204": {
+                        "description": "No Content"
+                    }
+                },
+                "tags": [
+                    "ProductsApi"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "additionalProperties": false,
+                                "properties": {
+                                    "key": {
+                                        "format": "guid",
+                                        "type": "string"
+                                    },
+                                    "serial": {
+                                        "format": "guid",
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "key"
+                                ],
+                                "type": "object"
+                            }
+                        }
+                    },
+                    "required": true
+                }
+            }
+        },
+        "/ProductsApi/PutProduct": {
+            "patch": {
+                "operationId": "ProductsApi_PutProduct2",
+                "responses": {
+                    "204": {
+                        "description": "No Content"
+                    }
+                },
+                "tags": [
+                    "ProductsApi"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "additionalProperties": false,
+                                "properties": {
+                                    "custom": {},
+                                    "key": {
+                                        "format": "guid",
+                                        "type": "string"
+                                    },
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "serial": {
+                                        "format": "guid",
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "key"
+                                ],
+                                "type": "object"
+                            }
+                        }
+                    },
+                    "required": true
+                }
+            },
+            "put": {
+                "operationId": "ProductsApi_PutProduct",
+                "responses": {
+                    "204": {
+                        "description": "No Content"
+                    }
+                },
+                "tags": [
+                    "ProductsApi"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "additionalProperties": false,
+                                "properties": {
+                                    "custom": {},
+                                    "key": {
+                                        "format": "guid",
+                                        "type": "string"
+                                    },
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "serial": {
+                                        "format": "guid",
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "key"
+                                ],
+                                "type": "object"
+                            }
+                        }
+                    },
+                    "required": true
+                }
+            }
+        },
+        "/SubscriptionsApi/DeleteSubscription": {
+            "delete": {
+                "operationId": "SubscriptionsApi_DeleteSubscription",
+                "responses": {
+                    "204": {
+                        "description": "No Content"
+                    }
+                },
+                "tags": [
+                    "SubscriptionsApi"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "additionalProperties": false,
+                                "properties": {
+                                    "key": {
+                                        "format": "guid",
+                                        "type": "string"
+                                    },
+                                    "serial": {
+                                        "format": "guid",
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "key"
+                                ],
+                                "type": "object"
+                            }
+                        }
+                    },
+                    "required": true
+                }
+            }
+        },
+        "/SubscriptionsApi/PutSubscription": {
+            "patch": {
+                "operationId": "SubscriptionsApi_PutSubscription2",
+                "responses": {
+                    "204": {
+                        "description": "No Content"
+                    }
+                },
+                "tags": [
+                    "SubscriptionsApi"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "additionalProperties": false,
+                                "properties": {
+                                    "action": {
+                                        "minLength": 1,
+                                        "type": "string"
+                                    },
+                                    "callbackOnModify": {
+                                        "type": "boolean"
+                                    },
+                                    "callbackUrl": {
+                                        "format": "uri",
+                                        "title": "Callback Url",
+                                        "type": "string"
+                                    },
+                                    "custom": {},
+                                    "frequency": {
+                                        "minLength": 1,
+                                        "type": "string"
+                                    },
+                                    "key": {
+                                        "format": "guid",
+                                        "type": "string"
+                                    },
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "serial": {
+                                        "format": "guid",
+                                        "type": "string"
+                                    },
+                                    "startFrom": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "frequency",
+                                    "action",
+                                    "key",
+                                    "serial"
+                                ],
+                                "type": "object"
+                            }
+                        }
+                    },
+                    "required": true
+                }
+            },
+            "put": {
+                "operationId": "SubscriptionsApi_PutSubscription",
+                "responses": {
+                    "204": {
+                        "description": "No Content"
+                    }
+                },
+                "tags": [
+                    "SubscriptionsApi"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "additionalProperties": false,
+                                "properties": {
+                                    "action": {
+                                        "minLength": 1,
+                                        "type": "string"
+                                    },
+                                    "callbackOnModify": {
+                                        "type": "boolean"
+                                    },
+                                    "callbackUrl": {
+                                        "format": "uri",
+                                        "title": "Callback Url",
+                                        "type": "string"
+                                    },
+                                    "custom": {},
+                                    "frequency": {
+                                        "minLength": 1,
+                                        "type": "string"
+                                    },
+                                    "key": {
+                                        "format": "guid",
+                                        "type": "string"
+                                    },
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "serial": {
+                                        "format": "guid",
+                                        "type": "string"
+                                    },
+                                    "startFrom": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "frequency",
+                                    "action",
+                                    "key",
+                                    "serial"
+                                ],
+                                "type": "object"
+                            }
+                        }
+                    },
+                    "required": true
+                }
+            }
+        },
+        "/v1/KeysApi/Current/{serial}": {
+            "get": {
+                "operationId": "KeysApi_Current",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "serial",
+                        "required": true,
+                        "x-nullable": false,
+                        "schema": {
+                            "type": "string",
+                            "format": "guid"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "x-nullable": true,
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "current": {
+                                            "type": "boolean"
+                                        }
+                                    },
+                                    "required": [
+                                        "current"
+                                    ],
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "KeysApi"
+                ]
+            }
+        },
+        "/v1/KeysApi/Expiry/{serial}": {
+            "get": {
+                "operationId": "KeysApi_Expiry",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "serial",
+                        "required": true,
+                        "x-nullable": false,
+                        "schema": {
+                            "type": "string",
+                            "format": "guid"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "x-nullable": true,
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "expires": {
+                                            "format": "date-time",
+                                            "type": "string"
+                                        },
+                                        "time": {
+                                            "format": "time-span",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "expires",
+                                        "time"
+                                    ],
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "KeysApi"
+                ]
+            }
+        },
+        "/v1/KeysApi/Find/{serial}": {
+            "get": {
+                "operationId": "KeysApi_Find",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "serial",
+                        "required": true,
+                        "x-nullable": false,
+                        "schema": {
+                            "type": "string",
+                            "format": "guid"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "x-nullable": true,
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "action": {
+                                            "minLength": 1,
+                                            "type": "string"
+                                        },
+                                        "callbackOnModify": {
+                                            "title": "Callback On Modified",
+                                            "type": "boolean"
+                                        },
+                                        "callbackUrl": {
+                                            "format": "uri",
+                                            "title": "Callback Url",
+                                            "type": "string"
+                                        },
+                                        "commenced": {
+                                            "format": "date-time",
+                                            "minLength": 1,
+                                            "title": "Start From",
+                                            "type": "string"
+                                        },
+                                        "created": {
+                                            "format": "date-time",
+                                            "type": "string"
+                                        },
+                                        "current": {
+                                            "type": "boolean"
+                                        },
+                                        "custom": {},
+                                        "frequency": {
+                                            "minLength": 1,
+                                            "type": "string"
+                                        },
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "serial": {
+                                            "format": "guid",
+                                            "type": "string"
+                                        },
+                                        "updated": {
+                                            "format": "date-time",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "serial",
+                                        "current",
+                                        "commenced",
+                                        "callbackOnModify",
+                                        "created",
+                                        "frequency",
+                                        "action"
+                                    ],
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "KeysApi"
+                ]
+            }
+        },
+        "/v1/ProductsApi/Find": {
+            "post": {
+                "operationId": "ProductsApi_Find",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "x-nullable": true,
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "tags": [
+                    "ProductsApi"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "additionalProperties": false,
+                                "properties": {
+                                    "key": {
+                                        "format": "guid",
+                                        "type": "string"
+                                    },
+                                    "serial": {
+                                        "format": "guid",
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "key"
+                                ],
+                                "type": "object"
+                            }
+                        }
+                    },
+                    "required": true
+                }
+            }
+        },
+        "/v1/ProductsApi/Save": {
+            "post": {
+                "operationId": "ProductsApi_Save",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "x-nullable": true,
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "created": {
+                                            "format": "date-time",
+                                            "type": "string"
+                                        },
+                                        "custom": {},
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "serial": {
+                                            "format": "guid",
+                                            "type": "string"
+                                        },
+                                        "subscriptions": {
+                                            "items": {
+                                                "additionalProperties": false,
+                                                "properties": {
+                                                    "action": {
+                                                        "minLength": 1,
+                                                        "type": "string"
+                                                    },
+                                                    "callbackOnModify": {
+                                                        "title": "Callback On Modified",
+                                                        "type": "boolean"
+                                                    },
+                                                    "callbackUrl": {
+                                                        "format": "uri",
+                                                        "title": "Callback Url",
+                                                        "type": "string"
+                                                    },
+                                                    "commenced": {
+                                                        "format": "date-time",
+                                                        "minLength": 1,
+                                                        "title": "Start From",
+                                                        "type": "string"
+                                                    },
+                                                    "created": {
+                                                        "format": "date-time",
+                                                        "type": "string"
+                                                    },
+                                                    "custom": {},
+                                                    "frequency": {
+                                                        "minLength": 1,
+                                                        "type": "string"
+                                                    },
+                                                    "keys": {
+                                                        "items": {
+                                                            "additionalProperties": false,
+                                                            "properties": {
+                                                                "action": {
+                                                                    "minLength": 1,
+                                                                    "type": "string"
+                                                                },
+                                                                "callbackOnModify": {
+                                                                    "title": "Callback On Modified",
+                                                                    "type": "boolean"
+                                                                },
+                                                                "callbackUrl": {
+                                                                    "format": "uri",
+                                                                    "title": "Callback Url",
+                                                                    "type": "string"
+                                                                },
+                                                                "commenced": {
+                                                                    "format": "date-time",
+                                                                    "minLength": 1,
+                                                                    "title": "Start From",
+                                                                    "type": "string"
+                                                                },
+                                                                "created": {
+                                                                    "format": "date-time",
+                                                                    "type": "string"
+                                                                },
+                                                                "current": {
+                                                                    "type": "boolean"
+                                                                },
+                                                                "custom": {},
+                                                                "frequency": {
+                                                                    "minLength": 1,
+                                                                    "type": "string"
+                                                                },
+                                                                "name": {
+                                                                    "type": "string"
+                                                                },
+                                                                "serial": {
+                                                                    "format": "guid",
+                                                                    "type": "string"
+                                                                },
+                                                                "updated": {
+                                                                    "format": "date-time",
+                                                                    "type": "string"
+                                                                }
+                                                            },
+                                                            "required": [
+                                                                "serial",
+                                                                "current",
+                                                                "commenced",
+                                                                "callbackOnModify",
+                                                                "created",
+                                                                "frequency",
+                                                                "action"
+                                                            ],
+                                                            "type": "object"
+                                                        },
+                                                        "type": "array"
+                                                    },
+                                                    "name": {
+                                                        "type": "string"
+                                                    },
+                                                    "updated": {
+                                                        "format": "date-time",
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "commenced",
+                                                    "callbackOnModify",
+                                                    "created",
+                                                    "frequency",
+                                                    "action"
+                                                ],
+                                                "type": "object"
+                                            },
+                                            "type": "array"
+                                        },
+                                        "updated": {
+                                            "format": "date-time",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "serial",
+                                        "created"
+                                    ],
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "ProductsApi"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "additionalProperties": false,
+                                "properties": {
+                                    "custom": {},
+                                    "key": {
+                                        "format": "guid",
+                                        "type": "string"
+                                    },
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "serial": {
+                                        "format": "guid",
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "key"
+                                ],
+                                "type": "object"
+                            }
+                        }
+                    },
+                    "required": true
+                }
+            }
+        },
+        "/v1/SubscriptionsApi/Find": {
+            "post": {
+                "operationId": "SubscriptionsApi_Find",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "x-nullable": true,
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                },
+                "tags": [
+                    "SubscriptionsApi"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "additionalProperties": false,
+                                "properties": {
+                                    "key": {
+                                        "format": "guid",
+                                        "type": "string"
+                                    },
+                                    "serial": {
+                                        "format": "guid",
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "key"
+                                ],
+                                "type": "object"
+                            }
+                        }
+                    },
+                    "required": true
+                }
+            }
+        },
+        "/v1/SubscriptionsApi/Save": {
+            "post": {
+                "operationId": "SubscriptionsApi_Save",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "x-nullable": true,
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "action": {
+                                            "minLength": 1,
+                                            "type": "string"
+                                        },
+                                        "callbackOnModify": {
+                                            "title": "Callback On Modified",
+                                            "type": "boolean"
+                                        },
+                                        "callbackUrl": {
+                                            "format": "uri",
+                                            "title": "Callback Url",
+                                            "type": "string"
+                                        },
+                                        "commenced": {
+                                            "format": "date-time",
+                                            "minLength": 1,
+                                            "title": "Start From",
+                                            "type": "string"
+                                        },
+                                        "created": {
+                                            "format": "date-time",
+                                            "type": "string"
+                                        },
+                                        "current": {
+                                            "type": "boolean"
+                                        },
+                                        "custom": {},
+                                        "frequency": {
+                                            "minLength": 1,
+                                            "type": "string"
+                                        },
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "serial": {
+                                            "format": "guid",
+                                            "type": "string"
+                                        },
+                                        "updated": {
+                                            "format": "date-time",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "serial",
+                                        "current",
+                                        "commenced",
+                                        "callbackOnModify",
+                                        "created",
+                                        "frequency",
+                                        "action"
+                                    ],
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "SubscriptionsApi"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "additionalProperties": false,
+                                "properties": {
+                                    "action": {
+                                        "minLength": 1,
+                                        "type": "string"
+                                    },
+                                    "callbackOnModify": {
+                                        "type": "boolean"
+                                    },
+                                    "callbackUrl": {
+                                        "format": "uri",
+                                        "title": "Callback Url",
+                                        "type": "string"
+                                    },
+                                    "custom": {},
+                                    "frequency": {
+                                        "minLength": 1,
+                                        "type": "string"
+                                    },
+                                    "key": {
+                                        "format": "guid",
+                                        "type": "string"
+                                    },
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "serial": {
+                                        "format": "guid",
+                                        "type": "string"
+                                    },
+                                    "startFrom": {
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "frequency",
+                                    "action",
+                                    "key",
+                                    "serial"
+                                ],
+                                "type": "object"
+                            }
+                        }
+                    },
+                    "required": true
+                }
+            }
+        }
+    },
+    "x-generator": "NSwag v12.0.15.0 (NJsonSchema v9.13.22.0 (Newtonsoft.Json v11.0.0.0))",
+    "components": {
+        "schemas": {
+            "ApiCredentials": {
+                "additionalProperties": false,
+                "properties": {
+                    "key": {
+                        "format": "guid",
+                        "type": "string"
+                    },
+                    "serial": {
+                        "format": "guid",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "key"
+                ],
+                "type": "object"
+            },
+            "CurrentKey": {
+                "additionalProperties": false,
+                "properties": {
+                    "current": {
+                        "type": "boolean"
+                    }
+                },
+                "required": [
+                    "current"
+                ],
+                "type": "object"
+            },
+            "Expiry": {
+                "additionalProperties": false,
+                "properties": {
+                    "expires": {
+                        "format": "date-time",
+                        "type": "string"
+                    },
+                    "time": {
+                        "format": "time-span",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "expires",
+                    "time"
+                ],
+                "type": "object"
+            },
+            "KeyView": {
+                "additionalProperties": false,
+                "properties": {
+                    "action": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "callbackOnModify": {
+                        "title": "Callback On Modified",
+                        "type": "boolean"
+                    },
+                    "callbackUrl": {
+                        "format": "uri",
+                        "title": "Callback Url",
+                        "type": "string"
+                    },
+                    "commenced": {
+                        "format": "date-time",
+                        "minLength": 1,
+                        "title": "Start From",
+                        "type": "string"
+                    },
+                    "created": {
+                        "format": "date-time",
+                        "type": "string"
+                    },
+                    "current": {
+                        "type": "boolean"
+                    },
+                    "custom": {},
+                    "frequency": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "serial": {
+                        "format": "guid",
+                        "type": "string"
+                    },
+                    "updated": {
+                        "format": "date-time",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "serial",
+                    "current",
+                    "commenced",
+                    "callbackOnModify",
+                    "created",
+                    "frequency",
+                    "action"
+                ],
+                "type": "object"
+            },
+            "ProductCreateModify": {
+                "additionalProperties": false,
+                "properties": {
+                    "custom": {},
+                    "key": {
+                        "format": "guid",
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "serial": {
+                        "format": "guid",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "key"
+                ],
+                "type": "object"
+            },
+            "ProductView": {
+                "additionalProperties": false,
+                "properties": {
+                    "created": {
+                        "format": "date-time",
+                        "type": "string"
+                    },
+                    "custom": {},
+                    "name": {
+                        "type": "string"
+                    },
+                    "serial": {
+                        "format": "guid",
+                        "type": "string"
+                    },
+                    "subscriptions": {
+                        "items": {
+                            "additionalProperties": false,
+                            "properties": {
+                                "action": {
+                                    "minLength": 1,
+                                    "type": "string"
+                                },
+                                "callbackOnModify": {
+                                    "title": "Callback On Modified",
+                                    "type": "boolean"
+                                },
+                                "callbackUrl": {
+                                    "format": "uri",
+                                    "title": "Callback Url",
+                                    "type": "string"
+                                },
+                                "commenced": {
+                                    "format": "date-time",
+                                    "minLength": 1,
+                                    "title": "Start From",
+                                    "type": "string"
+                                },
+                                "created": {
+                                    "format": "date-time",
+                                    "type": "string"
+                                },
+                                "custom": {},
+                                "frequency": {
+                                    "minLength": 1,
+                                    "type": "string"
+                                },
+                                "keys": {
+                                    "items": {
+                                        "additionalProperties": false,
+                                        "properties": {
+                                            "action": {
+                                                "minLength": 1,
+                                                "type": "string"
+                                            },
+                                            "callbackOnModify": {
+                                                "title": "Callback On Modified",
+                                                "type": "boolean"
+                                            },
+                                            "callbackUrl": {
+                                                "format": "uri",
+                                                "title": "Callback Url",
+                                                "type": "string"
+                                            },
+                                            "commenced": {
+                                                "format": "date-time",
+                                                "minLength": 1,
+                                                "title": "Start From",
+                                                "type": "string"
+                                            },
+                                            "created": {
+                                                "format": "date-time",
+                                                "type": "string"
+                                            },
+                                            "current": {
+                                                "type": "boolean"
+                                            },
+                                            "custom": {},
+                                            "frequency": {
+                                                "minLength": 1,
+                                                "type": "string"
+                                            },
+                                            "name": {
+                                                "type": "string"
+                                            },
+                                            "serial": {
+                                                "format": "guid",
+                                                "type": "string"
+                                            },
+                                            "updated": {
+                                                "format": "date-time",
+                                                "type": "string"
+                                            }
+                                        },
+                                        "required": [
+                                            "serial",
+                                            "current",
+                                            "commenced",
+                                            "callbackOnModify",
+                                            "created",
+                                            "frequency",
+                                            "action"
+                                        ],
+                                        "type": "object"
+                                    },
+                                    "type": "array"
+                                },
+                                "name": {
+                                    "type": "string"
+                                },
+                                "updated": {
+                                    "format": "date-time",
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "commenced",
+                                "callbackOnModify",
+                                "created",
+                                "frequency",
+                                "action"
+                            ],
+                            "type": "object"
+                        },
+                        "type": "array"
+                    },
+                    "updated": {
+                        "format": "date-time",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "serial",
+                    "created"
+                ],
+                "type": "object"
+            },
+            "SubscriptionCreateModify": {
+                "additionalProperties": false,
+                "properties": {
+                    "action": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "callbackOnModify": {
+                        "type": "boolean"
+                    },
+                    "callbackUrl": {
+                        "format": "uri",
+                        "title": "Callback Url",
+                        "type": "string"
+                    },
+                    "custom": {},
+                    "frequency": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "key": {
+                        "format": "guid",
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "serial": {
+                        "format": "guid",
+                        "type": "string"
+                    },
+                    "startFrom": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "frequency",
+                    "action",
+                    "key",
+                    "serial"
+                ],
+                "type": "object"
+            },
+            "SubscriptionView": {
+                "additionalProperties": false,
+                "properties": {
+                    "action": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "callbackOnModify": {
+                        "title": "Callback On Modified",
+                        "type": "boolean"
+                    },
+                    "callbackUrl": {
+                        "format": "uri",
+                        "title": "Callback Url",
+                        "type": "string"
+                    },
+                    "commenced": {
+                        "format": "date-time",
+                        "minLength": 1,
+                        "title": "Start From",
+                        "type": "string"
+                    },
+                    "created": {
+                        "format": "date-time",
+                        "type": "string"
+                    },
+                    "custom": {},
+                    "frequency": {
+                        "minLength": 1,
+                        "type": "string"
+                    },
+                    "keys": {
+                        "items": {
+                            "additionalProperties": false,
+                            "properties": {
+                                "action": {
+                                    "minLength": 1,
+                                    "type": "string"
+                                },
+                                "callbackOnModify": {
+                                    "title": "Callback On Modified",
+                                    "type": "boolean"
+                                },
+                                "callbackUrl": {
+                                    "format": "uri",
+                                    "title": "Callback Url",
+                                    "type": "string"
+                                },
+                                "commenced": {
+                                    "format": "date-time",
+                                    "minLength": 1,
+                                    "title": "Start From",
+                                    "type": "string"
+                                },
+                                "created": {
+                                    "format": "date-time",
+                                    "type": "string"
+                                },
+                                "current": {
+                                    "type": "boolean"
+                                },
+                                "custom": {},
+                                "frequency": {
+                                    "minLength": 1,
+                                    "type": "string"
+                                },
+                                "name": {
+                                    "type": "string"
+                                },
+                                "serial": {
+                                    "format": "guid",
+                                    "type": "string"
+                                },
+                                "updated": {
+                                    "format": "date-time",
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "serial",
+                                "current",
+                                "commenced",
+                                "callbackOnModify",
+                                "created",
+                                "frequency",
+                                "action"
+                            ],
+                            "type": "object"
+                        },
+                        "type": "array"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "updated": {
+                        "format": "date-time",
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "commenced",
+                    "callbackOnModify",
+                    "created",
+                    "frequency",
+                    "action"
+                ],
+                "type": "object"
+            }
+        },
+        "requestBodies": {
+            "ProductsApi_DeleteProductApicreds": {
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "additionalProperties": false,
+                            "properties": {
+                                "key": {
+                                    "format": "guid",
+                                    "type": "string"
+                                },
+                                "serial": {
+                                    "format": "guid",
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "key"
+                            ],
+                            "type": "object"
+                        }
+                    }
+                },
+                "required": true
+            },
+            "ProductsApi_PutProduct2Productjson": {
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "additionalProperties": false,
+                            "properties": {
+                                "custom": {},
+                                "key": {
+                                    "format": "guid",
+                                    "type": "string"
+                                },
+                                "name": {
+                                    "type": "string"
+                                },
+                                "serial": {
+                                    "format": "guid",
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "key"
+                            ],
+                            "type": "object"
+                        }
+                    }
+                },
+                "required": true
+            },
+            "SubscriptionsApi_PutSubscription2Subscriptionjson": {
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "additionalProperties": false,
+                            "properties": {
+                                "action": {
+                                    "minLength": 1,
+                                    "type": "string"
+                                },
+                                "callbackOnModify": {
+                                    "type": "boolean"
+                                },
+                                "callbackUrl": {
+                                    "format": "uri",
+                                    "title": "Callback Url",
+                                    "type": "string"
+                                },
+                                "custom": {},
+                                "frequency": {
+                                    "minLength": 1,
+                                    "type": "string"
+                                },
+                                "key": {
+                                    "format": "guid",
+                                    "type": "string"
+                                },
+                                "name": {
+                                    "type": "string"
+                                },
+                                "serial": {
+                                    "format": "guid",
+                                    "type": "string"
+                                },
+                                "startFrom": {
+                                    "type": "string"
+                                }
+                            },
+                            "required": [
+                                "frequency",
+                                "action",
+                                "key",
+                                "serial"
+                            ],
+                            "type": "object"
+                        }
+                    }
+                },
+                "required": true
+            }
+        }
+    }
+}
